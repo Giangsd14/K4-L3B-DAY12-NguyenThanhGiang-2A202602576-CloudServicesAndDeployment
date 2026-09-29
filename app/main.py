@@ -141,6 +141,10 @@ def ask(
         "tokens": {"in": result["tokens_in"], "out": result["tokens_out"]},
     }
 
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to Agent API! Go to /health or /ask"}
+
 
 if __name__ == "__main__":
     import uvicorn
